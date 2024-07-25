@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Julián Amigorena</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Simulador de Gestión de Inventarios</h1>
     <p>Esta aplicación permite gestionar el inventario de una tienda, agregando productos, actualizando cantidades, precios y consultando el inventario.</p>
+    <div id="formulario">
+        <h2>Agregar Producto</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" required>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" step="0.01" required>
+        <button id="agregarProductoBtn">Agregar Producto</button>
+    </div>
+    
+    <div id="actualizarCantidad">
+        <h2>Actualizar Cantidad</h2>
+        <label for="nombreActualizarCantidad">Nombre:</label>
+        <input type="text" id="nombreActualizarCantidad" required>
+        <label for="nuevaCantidad">Nueva Cantidad:</label>
+        <input type="number" id="nuevaCantidad" required>
+        <button id="actualizarCantidadBtn">Actualizar Cantidad</button>
+    </div>
+    
+    <div id="actualizarPrecio">
+        <h2>Actualizar Precio</h2>
+        <label for="nombreActualizarPrecio">Nombre:</label>
+        <input type="text" id="nombreActualizarPrecio" required>
+        <label for="nuevoPrecio">Nuevo Precio:</label>
+        <input type="number" id="nuevoPrecio" step="0.01" required>
+        <button id="actualizarPrecioBtn">Actualizar Precio</button>
+    </div>
+    
+    <button id="consultarInventarioBtn">Consultar Inventario</button>
+    <button id="calcularValorInventarioBtn">Calcular Valor del Inventario</button>
+    
+    <div id="mensajes"></div>
+    <div id="inventario"></div>
+    
     <script src="app.js"></script>
 </body>
 </html>
